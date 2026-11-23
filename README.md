@@ -12,6 +12,7 @@ The standard is a draft for public review. It is not government-endorsed, an acc
 - [Documentation architecture](docs/architecture.md) — how the standard is organised and intended to evolve.
 - [AI agent instruction support](docs/agent-tool-support.md) — supported instruction-file entry points and their limitations.
 - [macOS execution profile](docs/platforms/macos.md) — a strict local reference profile and its limits.
+- [Windows execution profile](docs/platforms/windows.md) — a strict Windows Sandbox profile and `.wsb` template.
 - [Contributing](CONTRIBUTING.md) — how to comment on or propose changes.
 
 ## What it covers
