@@ -10,6 +10,7 @@ The standard is a draft for public review. It is not government-endorsed, an acc
 
 - [Draft standard v0.1.0](standard/v0.1.0.md) — proposed requirements, implementation guidance and evidence expectations.
 - [Documentation architecture](docs/architecture.md) — how the standard is organised and intended to evolve.
+- [AI agent instruction support](docs/agent-tool-support.md) — supported instruction-file entry points and their limitations.
 - [Contributing](CONTRIBUTING.md) — how to comment on or propose changes.
 
 ## What it covers
@@ -23,6 +24,12 @@ It applies to AI used to perform or assist software engineering tasks, including
 Organisations should identify the applicable version, assess each requirement against their own legal, contractual, classification and security obligations, and retain evidence of implementation. Requirements in this standard do not authorise an activity that those obligations prohibit. A written exception to this draft cannot override them.
 
 The standard uses **MUST** for a required control and **SHOULD** for a recommended control. The controls are proposals from this project, not requirements imposed by the frameworks cited in the standard.
+
+## AI agents working in this repository
+
+[`AGENTS.md`](AGENTS.md) is the canonical contributor instruction file. [`CLAUDE.md`](CLAUDE.md), [`GEMINI.md`](GEMINI.md) and [Copilot's repository instructions](.github/copilot-instructions.md) are discovery adapters for documented clients.
+
+No set of files is readable or enforceable by every AI product. These instructions are not a security boundary: use sandboxing, least-privilege permissions, network controls and human approvals to enforce restrictions.
 
 ## Principles
 

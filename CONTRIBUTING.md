@@ -18,4 +18,6 @@ Do not include sensitive, classified, personal or client information in issues o
 
 Changes to normative requirements should receive review for technical enforceability, proportionality, accessibility, compatibility with existing control IDs, and interaction with law, contracts and organisational policy. External frameworks should be described accurately and separately from this project's proposed controls.
 
+Changes to `AGENTS.md` or provider adapters should preserve one canonical instruction source and be checked against the client's current official discovery documentation. Do not describe instruction files as enforcement.
+
 Control IDs are stable and must not be reused. Material requirement changes belong in a new version and should be recorded with their rationale. The project does not provide certification or official endorsement.

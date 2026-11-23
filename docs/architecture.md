@@ -6,8 +6,13 @@ This repository separates normative requirements from explanatory material so re
 
 ```text
 README.md                    Project purpose and entry points
+AGENTS.md                    Canonical instructions for AI contributors
+CLAUDE.md, GEMINI.md         Provider discovery adapters
+.github/copilot-instructions.md
+                             Copilot discovery adapter
 standard/v<version>.md       Versioned, normative control set
 docs/architecture.md         Document roles and evolution
+docs/agent-tool-support.md   Verified instruction-file formats and caveats
 CONTRIBUTING.md              Review and change process
 ```
 
@@ -18,6 +23,12 @@ Keep the initial control set in one versioned document. Split it into domain fil
 Each control has a persistent identifier, a short title, a normative statement, implementation guidance and expected evidence. Identifiers remain stable across versions; retired identifiers are not reused. A material change to a requirement is documented in the version history.
 
 Use **MUST** for a required control and **SHOULD** for a recommended control. Control statements are this project's proposals. External frameworks are references and do not become requirements through citation.
+
+## AI contributor instructions
+
+`AGENTS.md` is the single canonical instruction source for agents working in this repository. Provider-specific files exist only to help documented clients discover it; they should point to or import the canonical file, not duplicate its rules. The support list is deliberately limited to clients whose current official documentation has been checked.
+
+Instruction discovery is not enforcement. Restrictions on filesystem, commands, network, credentials and consequential actions require technical controls outside Markdown files. A client that does not load or follow an instruction file is not constrained by it.
 
 ## Evidence and applicability
 
