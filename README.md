@@ -10,9 +10,18 @@ The standard is a draft for public review. It is not government-endorsed, an acc
 
 - [Draft standard v0.1.0](standard/v0.1.0.md) — proposed requirements, implementation guidance and evidence expectations.
 - [Documentation architecture](docs/architecture.md) — how the standard is organised and intended to evolve.
+- [Threat model and risk matrix](docs/threat-model.md): core attack vectors, failure modes, and control mapping.
+- [Conformance checklist](docs/conformance-checklist.md): structured evaluation worksheet for the 21 controls.
+- Domain verification profiles:
+  - [Frontend verification](docs/verification/frontend.md): automated WCAG 2.2 AA and container testing battery.
+  - [Backend & API verification](docs/verification/backend.md): SAST, injection defence, and object-level authorisation.
+  - [DevOps & Platform verification](docs/verification/devops.md): IaC policy-as-code, container hardening, and supply-chain pinning.
+  - [Full-stack verification](docs/verification/fullstack.md): boundary isolation, secret leak prevention, and end-to-end contracts.
+- Platform execution profiles:
+  - [Linux execution profile](docs/platforms/linux.md): disposable microVM and rootless container isolation guidance.
+  - [macOS execution profile](docs/platforms/macos.md) — a strict local reference profile and its limits.
+  - [Windows execution profile](docs/platforms/windows.md) — a strict Windows Sandbox profile and `.wsb` template.
 - [AI agent instruction support](docs/agent-tool-support.md) — supported instruction-file entry points and their limitations.
-- [macOS execution profile](docs/platforms/macos.md) — a strict local reference profile and its limits.
-- [Windows execution profile](docs/platforms/windows.md) — a strict Windows Sandbox profile and `.wsb` template.
 - [Contributing](CONTRIBUTING.md) — how to comment on or propose changes.
 
 ## What it covers
