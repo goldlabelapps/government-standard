@@ -1,7 +1,7 @@
 # Frontend verification profile and testing battery
 
 **Status:** Implementation guidance  
-**Standard reference:** [Government Standard v0.2.0](../../standard/v0.2.0.md) (Control `GS-AI-CODE-02`)  
+**Standard reference:** [Government Standard v0.3.0](../../standard/v0.3.0.md) (Control `GS-AI-CODE-02`)  
 **Applies to:** Frontend web applications, design systems, and user interfaces running locally in Docker or development environments  
 
 This profile guides frontend engineers in verifying that web applications created or assisted by AI tools meet the rigorous standards mandated across government and public sector digital services.

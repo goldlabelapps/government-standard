@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Government Standard - Operational Verification CLI
-Enforces normative controls from standard/v0.2.0.md across local workspaces.
+Enforces normative controls from standard/v0.3.0.md across local workspaces.
 """
 
 import argparse
@@ -146,10 +146,10 @@ def check_links_and_assets(root: Path) -> list:
 
 
 def evaluate_conformance(root: Path) -> dict:
-    """Verifies baseline repository controls defined in Government Standard v0.2.0."""
+    """Verifies baseline repository controls defined in Government Standard v0.3.0."""
     checks = [
         ("Canonical Agent Instructions (Control GS-AI-TOOL-01)", (root / "AGENTS.md").exists()),
-        ("Versioned Standard Normative Spec", (root / "standard/v0.2.0.md").exists()),
+        ("Versioned Standard Normative Spec", (root / "standard/v0.3.0.md").exists()),
         ("Threat Model and Risk Matrix", (root / "docs/threat-model.md").exists()),
         ("Conformance Checklist Evaluation Worksheet", (root / "docs/conformance-checklist.md").exists()),
         ("Frontend Verification Profile (WCAG 2.2 AA)", (root / "docs/verification/frontend.md").exists()),
@@ -177,7 +177,7 @@ def main():
     parser.add_argument("--all", action="store_true", default=True, help="Run all verification checks")
     parser.add_argument("--secrets", action="store_true", help="Scan repository for hardcoded credentials and tokens")
     parser.add_argument("--links", action="store_true", help="Validate link and asset integrity across markdown files")
-    parser.add_argument("--conformance", action="store_true", help="Evaluate conformance against Government Standard v0.2.0")
+    parser.add_argument("--conformance", action="store_true", help="Evaluate conformance against Government Standard v0.3.0")
     parser.add_argument("--pre-commit", action="store_true", help="Run pre-commit checks on staged changes")
     parser.add_argument("--json", action="store_true", help="Output results in JSON format")
 
@@ -242,7 +242,7 @@ def main():
             print("[+] PASSED: All internal Markdown links and asset paths verified.")
 
     if selected_conformance:
-        print("\n[*] EVALUATING REPOSITORY CONFORMANCE (v0.2.0 BASELINE)...")
+        print("\n[*] EVALUATING REPOSITORY CONFORMANCE (v0.3.0 BASELINE)...")
         for check in telemetry["conformance"]["checks"]:
             status_str = "[OK]" if check["passed"] else "[MISSING]"
             print(f"  {status_str:9} {check['name']}")

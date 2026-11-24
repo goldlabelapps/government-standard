@@ -4,8 +4,8 @@
 
 # Conformance and audit checklist
 
-**Version:** 0.2.0-draft  
-**Standard reference:** [Government Standard v0.2.0](../standard/v0.2.0.md)  
+**Version:** 0.3.0-draft  
+**Standard reference:** [Government Standard v0.3.0](../standard/v0.3.0.md)  
 **Status:** Audit worksheet template  
 
 This checklist provides an evaluation framework for organisations assessing AI-assisted software engineering practices against the Government Standard.

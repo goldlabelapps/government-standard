@@ -1,6 +1,6 @@
 {
   "name": "@goldlabelapps/government-standard",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Practical harness and normative standard for governing AI-assisted software engineering in public sector environments",
   "private": true,
   "scripts": {

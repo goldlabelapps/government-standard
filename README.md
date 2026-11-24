@@ -30,7 +30,7 @@ This repository provides an executable verification harness and accessible basel
 
 ## Start Here
 
-- [Draft standard v0.2.0](standard/v0.2.0.md): proposed requirements, implementation guidance, and evidence expectations (previous: [v0.1.0](standard/v0.1.0.md)).
+- [Draft standard v0.3.0](standard/v0.3.0.md): proposed requirements, implementation guidance, and evidence expectations (previous: [v0.2.0](standard/v0.2.0.md), [v0.1.0](standard/v0.1.0.md)).
 - [Documentation architecture](docs/architecture.md): how the standard is organised and intended to evolve.
 - [Threat model and risk matrix](docs/threat-model.md): core attack vectors, failure modes, and control mapping.
 - [Conformance checklist](docs/conformance-checklist.md): structured evaluation worksheet for the 21 controls.

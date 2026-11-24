@@ -4,7 +4,7 @@ These are working instructions for AI agents contributing to this repository. Th
 
 ## Project context
 
-- Read the [README](README.md) and the applicable version of the [standard](standard/v0.2.0.md) before making substantive documentation changes.
+- Read the [README](README.md) and the applicable version of the [standard](standard/v0.3.0.md) before making substantive documentation changes.
 - Keep the standard independent, evidence-oriented and clear about the distinction between project proposals and external requirements.
 - Use authoritative sources for claims about external frameworks and avoid implying endorsement, equivalence or certification.
 - Treat this file as the canonical repository instruction source. Provider-specific files are discovery adapters; do not maintain a second, conflicting policy in them.
