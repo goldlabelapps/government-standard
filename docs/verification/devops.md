@@ -38,7 +38,7 @@ Platform declarations deployed in public sector environments must satisfy five m
 * **Read-Only Root Filesystems:** Containers should run with read-only root filesystems (`--read-only`), mounting ephemeral storage only where write operations are strictly necessary.
 
 ### C. Network Boundary Governance
-* **Default-Deny Ingress and Egress:** Security groups and Kubernetes NetworkPolicies must deny all inbound and outbound traffic by default, whitelisting only verified internal dependencies and approved external egress endpoints (`GS-AI-ACCESS-02`).
+* **Default-Deny Ingress and Egress:** Security groups and Kubernetes NetworkPolicies must deny all inbound and outbound traffic by default, allowing only verified internal dependencies and approved external egress endpoints (`GS-AI-ACCESS-02`).
 * **Zero Public Administrative Access:** Management interfaces, databases, and control planes must never be exposed directly to the public internet.
 
 ### D. Immutable Supply Chain and CI/CD Integrity

@@ -1,7 +1,7 @@
 # macOS local execution profile
 
 **Status:** Draft implementation guidance  
-**Reviewed:** 23 November 2026  
+**Reviewed:** 24 November 2026  
 **Applies to:** AI-assisted software engineering on macOS workstations
 
 This profile applies the controls in the [Government Standard](../../standard/v0.3.0.md) to a macOS environment. It is guidance, not a configuration applied to this computer, a product-specific recipe, or a claim that macOS alone confines an AI agent.
@@ -45,16 +45,16 @@ Assume an unsandboxed app can access all files available to its account. Do not 
 
 Apple's App Sandbox restricts resources according to entitlements. It is an app capability that must be supported and configured by the app; it is not a general-purpose wrapper that automatically sandboxes every installed IDE, extension, shell or agent. Verify the actual app and helper-process configuration instead of inferring protection from the app's presence on macOS.
 
-Do not rely on an agent instruction file, a permission prompt, account separation, or an app being signed or notarized as proof that its filesystem, command or network actions are confined. Enforce those limits in the VM, operating-system permissions, managed network controls and repository workflow.
+Do not rely on an agent instruction file, a permission prompt, account separation, or an app being signed or notarised as proof that its filesystem, command or network actions are confined. Enforce those limits in the VM, operating-system permissions, managed network controls and repository workflow.
 
 ## Phased relaxation
 
 | Phase | Starting restriction | Permit only when |
 | --- | --- | --- |
-| 0 — Observe | Read-only task data; no shell, agent tools, credentials or general network | The approved task can be completed without added capability. |
-| 1 — Write | No writes outside a disposable task workspace | A human approves the specific workspace and can inspect or revert its changes. |
-| 2 — Model connectivity | No outbound connections from the agent environment | The provider and data use are approved, and network controls constrain the model connection. |
-| 3 — Additional tools | No terminal, MCP, plugins, browser or external integrations | Each tool has a defined purpose, owner, permission set and verification method; consequential actions still require human approval. |
+| 0: Observe | Read-only task data; no shell, agent tools, credentials or general network | The approved task can be completed without added capability. |
+| 1: Write | No writes outside a disposable task workspace | A human approves the specific workspace and can inspect or revert its changes. |
+| 2: Model connectivity | No outbound connections from the agent environment | The provider and data use are approved, and network controls constrain the model connection. |
+| 3: Additional tools | No terminal, MCP, plugins, browser or external integrations | Each tool has a defined purpose, owner, permission set and verification method; consequential actions still require human approval. |
 
 If a restriction cannot be technically enforced or verified, do not mark it as satisfied. Keep that capability disabled or use a stronger isolation boundary.
 
@@ -74,7 +74,7 @@ An unverified control is not a control. If a required check fails, stop and rest
 
 ## Apple references
 
-These references explain platform capabilities; they do not endorse this profile. Checked on 23 November 2026; consult current documentation.
+These references explain platform capabilities; they do not endorse this profile. Checked on 24 November 2026; consult current documentation.
 
-- [Apple App Sandbox](https://developer.apple.com/documentation/security/app-sandbox) — resource access is limited through app entitlements.
-- [Apple Virtualization framework](https://developer.apple.com/documentation/virtualization) — VM configuration includes devices for networking, shared directories and clipboard.
+- [Apple App Sandbox](https://developer.apple.com/documentation/security/app-sandbox): resource access is limited through app entitlements.
+- [Apple Virtualization framework](https://developer.apple.com/documentation/virtualization): VM configuration includes devices for networking, shared directories and clipboard.

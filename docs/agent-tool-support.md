@@ -19,7 +19,7 @@ An instruction file is model context, not a permission boundary. It cannot relia
 
 ## Sources
 
-Client behavior was checked on 23 November 2026. Consult current documentation before configuring a client:
+Client behaviour was checked on 23 November 2026. Consult current documentation before configuring a client:
 
 - [OpenAI Codex project instructions](https://developers.openai.com/codex/guides/agents-md/)
 - [GitHub Copilot repository custom instructions](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)

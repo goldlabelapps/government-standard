@@ -40,7 +40,7 @@ Agents must run without ambient internet connectivity:
 
 The containment boundary must strictly govern data ingress and egress:
 
-- **Input data:** Mount only a sanitized, task-specific directory as read-only (`:ro`). Never mount the developer home directory, SSH directories (`~/.ssh`), GPG keys (`~/.gnupg`), cloud credentials (`~/.aws`, `~/.config/gcloud`), or environment secret files.
+- **Input data:** Mount only a sanitised, task-specific directory as read-only (`:ro`). Never mount the developer home directory, SSH directories (`~/.ssh`), GPG keys (`~/.gnupg`), cloud credentials (`~/.aws`, `~/.config/gcloud`), or environment secret files.
 - **Output data:** Provide an empty, isolated working copy for output files. Changes in the output workspace must be treated as untrusted data: inspect, diff, and verify all output using human-controlled tools on the host before committing or executing them outside the sandbox.
 - **Tools and credentials:** Keep compilers, package managers, terminal execution, browser automation, and MCP server integrations disabled by default. Enable only the specific tools needed for the approved task. Never pass ambient environment secrets, tokens, or private keys into the container environment.
 
@@ -60,7 +60,7 @@ Do not rely on an agent instruction file, IDE prompt, or unconfined container ru
 | Phase | Starting restriction | Permit only when |
 | --- | --- | --- |
 | 0: Observe | Offline, read-only ephemeral container or microVM; no network, tools, or credentials | The approved task can be completed without additional capability. |
-| 1: Read | No task files exposed to the environment | A human approves a sanitized, task-specific directory mounted strictly read-only. |
+| 1: Read | No task files exposed to the environment | A human approves a sanitised, task-specific directory mounted strictly read-only. |
 | 2: Model connectivity | No network interfaces except loopback | The provider and data use are approved, and egress filters restrict traffic strictly to the model endpoint. |
 | 3: Write and build | Ephemeral root filesystem only; no persistent writes | A human approves a separate, disposable workspace; all changes are treated as untrusted and reviewed before merging. |
 | 4: Additional tools | No compiler, package manager, terminal, or MCP servers | Each tool has a documented purpose, minimal permissions, and an audit trail; consequential actions require human sign-off. |

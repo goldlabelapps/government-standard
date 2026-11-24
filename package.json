@@ -8,7 +8,8 @@
     "verify": "make verify",
     "audit": "make audit",
     "secrets": "make secrets",
-    "links": "make links"
+    "links": "make links",
+    "validate": "make validate"
   },
   "keywords": [
     "government-standard",
