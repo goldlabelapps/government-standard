@@ -1,0 +1,62 @@
+name: Verify Standard
+
+on:
+  push:
+    branches: [main, master, staging]
+  pull_request:
+    branches: [main, master, staging]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-links-and-structure:
+    name: Verify Markdown & Links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Verify internal link integrity and structure
+        run: |
+          python3 -c "
+          import os, re, sys
+
+          root_dir = os.getcwd()
+          md_files = []
+          for r, d, f in os.walk(root_dir):
+              if '.git' in r:
+                  continue
+              for file in f:
+                  if file.endswith('.md'):
+                      md_files.append(os.path.join(r, file))
+
+          broken_links = 0
+          link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+
+          for md_path in md_files:
+              rel_md = os.path.relpath(md_path, root_dir)
+              with open(md_path, 'r', encoding='utf-8') as f:
+                  content = f.read()
+
+              for text, target in link_pattern.findall(content):
+                  if target.startswith(('http://', 'https://', 'mailto:', '#')):
+                      continue
+                  clean_target = target.split('#')[0]
+                  if not clean_target:
+                      continue
+                  target_path = os.path.normpath(os.path.join(os.path.dirname(md_path), clean_target))
+                  if not os.path.exists(target_path):
+                      print(f'BROKEN LINK in {rel_md}: [{text}]({target}) -> {target_path} not found')
+                      broken_links += 1
+
+          if broken_links > 0:
+              print(f'Verification failed: {broken_links} broken internal links detected.')
+              sys.exit(1)
+          print(f'Internal link check passed: {len(md_files)} markdown files inspected.')
+          "

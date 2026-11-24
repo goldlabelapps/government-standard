@@ -12,8 +12,12 @@ CLAUDE.md, GEMINI.md         Provider discovery adapters
                              Copilot discovery adapter
 standard/v<version>.md       Versioned, normative control set
 docs/architecture.md         Document roles and evolution
+docs/threat-model.md         Threat model and attack vector analysis
+docs/conformance-checklist.md
+                             Evaluation and audit worksheet
 docs/agent-tool-support.md   Verified instruction-file formats and caveats
 docs/platforms/               Platform-specific implementation profiles
+docs/verification/           Domain verification profiles (frontend, backend, devops, fullstack)
 CONTRIBUTING.md              Review and change process
 ```
 
