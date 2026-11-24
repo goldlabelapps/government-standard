@@ -1,11 +1,20 @@
-# Documentation architecture
+<p align="left">
+  <img src="../assets/govmint/favicon.svg" alt="Government Standard Crown Badge" width="48" height="48">
+</p>
 
-This repository separates normative requirements from explanatory material so readers can tell what the standard requires and what it recommends as a way to implement it.
+# Documentation and harness architecture
+
+This repository separates normative requirements from explanatory material and developer tooling so readers can tell what the standard requires, how to implement it, and how to verify compliance automatically.
 
 ## Proposed structure
 
 ```text
-README.md                    Project purpose and entry points
+README.md                    Project purpose, harness quickstart, and entry points
+Makefile, package.json       Universal task entrypoint and scripts
+bin/gov-verify               Operational verification CLI (secrets, links, conformance)
+bin/setup-hooks              Local git pre-commit hook installer
+template/                    Accessible, WCAG 2.2 AA compliant starter baseline
+assets/govmint/              Brand mark, crown icons, and Open Government Licence crest
 AGENTS.md                    Canonical instructions for AI contributors
 CLAUDE.md, GEMINI.md         Provider discovery adapters
 .github/copilot-instructions.md
@@ -16,7 +25,7 @@ docs/threat-model.md         Threat model and attack vector analysis
 docs/conformance-checklist.md
                              Evaluation and audit worksheet
 docs/agent-tool-support.md   Verified instruction-file formats and caveats
-docs/platforms/               Platform-specific implementation profiles
+docs/platforms/              Platform-specific implementation profiles
 docs/verification/           Domain verification profiles (frontend, backend, devops, fullstack)
 CONTRIBUTING.md              Review and change process
 ```

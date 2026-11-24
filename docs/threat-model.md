@@ -1,10 +1,14 @@
+<p align="left">
+  <img src="../assets/govmint/favicon.svg" alt="Government Standard Crown Badge" width="48" height="48">
+</p>
+
 # Threat model and risk matrix
 
-**Version:** 0.2.0-draft  
-**Standard reference:** [Government Standard v0.2.0](../standard/v0.2.0.md)  
+**Version:** 0.3.0-draft  
+**Standard reference:** [Government Standard v0.3.0](../standard/v0.3.0.md)  
 **Status:** Threat analysis and control mapping  
 
-This document defines the core threat model governing AI-assisted software engineering in public sector and security-conscious environments. It explains the specific attack vectors, risk scenarios, and failure modes that the controls in the [Government Standard](../standard/v0.2.0.md) are designed to counter.
+This document defines the core threat model governing AI-assisted software engineering in public sector and security-conscious environments. It explains the specific attack vectors, risk scenarios, and failure modes that the controls in the [Government Standard](../standard/v0.3.0.md) are designed to counter.
 
 ---
 

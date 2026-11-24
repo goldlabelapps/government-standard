@@ -4,7 +4,7 @@
 **Reviewed:** 24 November 2026  
 **Applies to:** AI-assisted software engineering on Linux workstations, CI/CD runners, and containerised environments
 
-This profile applies the controls in the [Government Standard](../../standard/v0.2.0.md) to a Linux environment. It is guidance, not a configuration applied to this computer, a product-specific recipe, or a claim that Linux alone confines an AI agent.
+This profile applies the controls in the [Government Standard](../../standard/v0.3.0.md) to a Linux environment. It is guidance, not a configuration applied to this computer, a product-specific recipe, or a claim that Linux alone confines an AI agent.
 
 ## Starting position
 
