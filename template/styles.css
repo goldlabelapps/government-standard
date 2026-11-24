@@ -228,6 +228,29 @@ body {
   box-shadow: none;
 }
 
+.gov-status {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-left: 5px solid;
+}
+
+.gov-status h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.gov-status--error {
+  border-left-color: var(--gov-color-error);
+  background-color: #fef7f7;
+  color: var(--gov-color-error);
+}
+
+.gov-status--success {
+  border-left-color: #00703c;
+  background-color: #f3faf6;
+  color: #00703c;
+}
+
 /* Footer */
 .gov-footer {
   background-color: var(--gov-color-footer-bg);

@@ -147,12 +147,49 @@ def check_links_and_assets(root: Path) -> list:
 
 def evaluate_conformance(root: Path) -> dict:
     """Verifies baseline repository controls defined in Government Standard v0.3.0."""
+    template_html = root / "template/index.html"
+    template_js = root / "template/app.js"
+    template_css = root / "template/styles.css"
+    template_readme = root / "template/README.md"
+
+    html_text = template_html.read_text(encoding="utf-8") if template_html.exists() else ""
+    js_text = template_js.read_text(encoding="utf-8") if template_js.exists() else ""
+    css_text = template_css.read_text(encoding="utf-8") if template_css.exists() else ""
+    readme_text = template_readme.read_text(encoding="utf-8") if template_readme.exists() else ""
+
+    template_structure = all([
+        'class="gov-skip-link"' in html_text,
+        'href="#main-content"' in html_text,
+        '<header role="banner"' in html_text,
+        '<main id="main-content" role="main"' in html_text,
+        '<footer role="contentinfo"' in html_text,
+        "<fieldset" in html_text,
+        "<legend" in html_text,
+        'aria-live="polite"' in html_text,
+        'for="reference-id"' in html_text,
+        'id="reference-id"' in html_text,
+    ])
+    template_security = all([
+        "innerHTML" not in js_text,
+        "eval(" not in js_text,
+        "new Function(" not in js_text,
+        "javascript:" not in js_text.lower(),
+        "style=" not in html_text.lower(),
+    ])
+    template_security = template_security and not re.search(r"\s(on[a-z]+)=", html_text, re.IGNORECASE)
+    template_touch_target = "min-height: 44px" in css_text
+    template_csp = "frame-ancestors 'none'" in readme_text and "unsafe-inline" in readme_text and "unsafe-eval" in readme_text
+
     checks = [
         ("Canonical Agent Instructions (Control GS-AI-TOOL-01)", (root / "AGENTS.md").exists()),
         ("Versioned Standard Normative Spec", (root / "standard/v0.3.0.md").exists()),
         ("Threat Model and Risk Matrix", (root / "docs/threat-model.md").exists()),
         ("Conformance Checklist Evaluation Worksheet", (root / "docs/conformance-checklist.md").exists()),
         ("Frontend Verification Profile (WCAG 2.2 AA)", (root / "docs/verification/frontend.md").exists()),
+        ("Accessible Starter Template Structure", template_structure),
+        ("Accessible Template 44px Touch Targets", template_touch_target),
+        ("Accessible Template CSP Contract", template_csp),
+        ("Accessible Template Defensive JavaScript", template_security),
         ("Backend & API Verification Profile", (root / "docs/verification/backend.md").exists()),
         ("DevOps & Platform Verification Profile", (root / "docs/verification/devops.md").exists()),
         ("Full-Stack Verification Profile", (root / "docs/verification/fullstack.md").exists()),
