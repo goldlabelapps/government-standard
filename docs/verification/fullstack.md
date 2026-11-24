@@ -1,7 +1,7 @@
 # Full-stack engineering verification profile
 
 **Status:** Implementation guidance  
-**Standard reference:** [Government Standard v0.1.0](../../standard/v0.1.0.md) (Controls `GS-AI-CODE-01`, `GS-AI-CODE-02`, `GS-AI-DATA-01`, `GS-AI-DATA-02`, `GS-AI-HUM-01`)  
+**Standard reference:** [Government Standard v0.2.0](../../standard/v0.2.0.md) (Controls `GS-AI-CODE-01`, `GS-AI-CODE-02`, `GS-AI-DATA-01`, `GS-AI-DATA-02`, `GS-AI-HUM-01`)  
 **Applies to:** Full-stack frameworks (Next.js, Remix, Nuxt, SvelteKit), Server Actions, API routes, and client-server shared codebases  
 
 This profile guides full-stack engineers in verifying that modern web applications unifying client and server execution maintain strict security boundaries, prevent secret leakage, and enforce end-to-end data integrity.
