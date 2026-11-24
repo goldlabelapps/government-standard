@@ -1,0 +1,32 @@
+name: Verify Standard & Harness
+
+on:
+  push:
+    branches: [main, master, staging]
+  pull_request:
+    branches: [main, master, staging]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify Secrets, Links & Conformance
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Operational Verification Harness
+        run: |
+          chmod +x bin/gov-verify
+          ./bin/gov-verify
+
+      - name: Generate Machine-Readable Conformance Telemetry
+        run: |
+          ./bin/gov-verify --conformance --json
