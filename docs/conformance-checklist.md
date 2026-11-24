@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="../assets/govmint/favicon.svg" alt="Government Standard Crown Badge" width="48" height="48">
+</p>
+
 # Conformance and audit checklist
 
 **Version:** 0.2.0-draft  

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Government Standard - Hook Installer
+# Configures git to execute local security and conformance hooks from .githooks
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+
+echo "Configuring git hooks for repository at: ${REPO_ROOT}"
+
+if [ ! -d "${REPO_ROOT}/.git" ]; then
+  echo "Error: Not a git repository root (.git not found)"
+  exit 1
+fi
+
+chmod +x "${REPO_ROOT}/bin/gov-verify"
+chmod +x "${REPO_ROOT}/.githooks/pre-commit"
+
+git config core.hooksPath .githooks
+
+echo "Git core.hooksPath set to .githooks"
+echo "Pre-commit security and link verification gate is now active."

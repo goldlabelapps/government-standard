@@ -1,0 +1,23 @@
+{
+  "name": "@goldlabelapps/government-standard",
+  "version": "0.2.0",
+  "description": "Practical harness and normative standard for governing AI-assisted software engineering in public sector environments",
+  "private": true,
+  "scripts": {
+    "setup": "make setup",
+    "verify": "make verify",
+    "audit": "make audit",
+    "secrets": "make secrets",
+    "links": "make links"
+  },
+  "keywords": [
+    "government-standard",
+    "ai-governance",
+    "security",
+    "wcag",
+    "verification-harness",
+    "gds"
+  ],
+  "author": "Gold Label Apps",
+  "license": "MIT"
+}

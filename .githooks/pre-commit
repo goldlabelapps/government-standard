@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Government Standard - Pre-Commit Gate
+# Blocks secret leaks and unverified references before commit creation
+
+set -euo pipefail
+
+REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+
+echo "🐺 Running Government Standard pre-commit gate..."
+
+"${REPO_ROOT}/bin/gov-verify" --pre-commit
+
+echo "🐺 Pre-commit checks passed successfully."

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Government Standard Accessible Starter Template - WCAG 2.2 Level AA Compliant">
+  <title>Accessible Service Baseline - Government Standard</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/govmint/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip to main content link for keyboard and screen reader accessibility -->
+  <a href="#main-content" class="gov-skip-link">Skip to main content</a>
+
+  <!-- Header Landmark -->
+  <header role="banner" class="gov-header">
+    <div class="gov-container gov-header__inner">
+      <div class="gov-header__logo">
+        <img src="../assets/govmint/logo.svg" alt="GOV.MINT Logo" width="200" height="30" class="gov-logo-img">
+      </div>
+      <div class="gov-header__service-name">
+        <span class="gov-phase-tag">ALPHA</span>
+        <span class="gov-service-title">Public Service Harness</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content" role="main" class="gov-main gov-container">
+    <div class="gov-grid">
+      <div class="gov-column-two-thirds">
+        <h1 class="gov-heading-xl">Check your service compliance</h1>
+        <p class="gov-body-lead">
+          This starter template enforces the five pillars of public sector frontend delivery: accessibility, semantic structure, progressive enhancement, performance budgets, and defensive security.
+        </p>
+
+        <!-- Accessible Form Example -->
+        <form class="gov-form" novalidate id="compliance-form">
+          <fieldset class="gov-fieldset" aria-describedby="compliance-hint">
+            <legend class="gov-fieldset__legend gov-heading-m">
+              Contract details
+            </legend>
+            <div id="compliance-hint" class="gov-hint">
+              Enter your reference number from your onboarding documentation.
+            </div>
+
+            <div class="gov-form-group">
+              <label for="reference-id" class="gov-label">
+                Onboarding reference number
+              </label>
+              <input type="text" id="reference-id" name="reference-id" class="gov-input" required autocomplete="off" spellcheck="false">
+            </div>
+
+            <div class="gov-form-group">
+              <label for="classification" class="gov-label">
+                Data classification level
+              </label>
+              <select id="classification" name="classification" class="gov-select">
+                <option value="official">OFFICIAL</option>
+                <option value="official-sensitive">OFFICIAL-SENSITIVE</option>
+              </select>
+            </div>
+
+            <div class="gov-form-group">
+              <button type="submit" class="gov-button">
+                Verify compliance
+              </button>
+            </div>
+          </fieldset>
+        </form>
+
+        <div id="status-region" aria-live="polite" class="gov-status-region"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Landmark -->
+  <footer role="contentinfo" class="gov-footer">
+    <div class="gov-container gov-footer__inner">
+      <div class="gov-footer__meta">
+        <div class="gov-footer__ogl">
+          <img src="../assets/govmint/ogl-symbol-41px-retina-black.png" alt="Open Government Licence" width="41" height="17" class="gov-ogl-img">
+          <p class="gov-body-s">
+            All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="noreferrer">Open Government Licence v3.0</a>, except where otherwise stated.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
