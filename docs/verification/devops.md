@@ -1,7 +1,7 @@
 # DevOps and platform engineering verification profile
 
 **Status:** Implementation guidance  
-**Standard reference:** [Government Standard v0.1.0](../../standard/v0.1.0.md) (Controls `GS-AI-EXEC-01`, `GS-AI-ACCESS-01`, `GS-AI-ACCESS-02`, `GS-AI-CODE-03`, `GS-AI-SUPPLY-01`)  
+**Standard reference:** [Government Standard v0.2.0](../../standard/v0.2.0.md) (Controls `GS-AI-EXEC-01`, `GS-AI-ACCESS-01`, `GS-AI-ACCESS-02`, `GS-AI-CODE-03`, `GS-AI-SUPPLY-01`)  
 **Applies to:** Infrastructure as Code (Terraform, OpenTofu), container descriptors (Dockerfiles), Kubernetes manifests, and CI/CD automation pipelines generated or modified using AI tools  
 
 This profile guides DevOps, Platform, and Site Reliability Engineers in verifying that infrastructure declarations, deployment pipelines, and orchestration configurations comply with government platform security and supply chain baselines.

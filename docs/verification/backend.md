@@ -1,7 +1,7 @@
 # Backend and API verification profile
 
 **Status:** Implementation guidance  
-**Standard reference:** [Government Standard v0.1.0](../../standard/v0.1.0.md) (Controls `GS-AI-CODE-01`, `GS-AI-CODE-02`, `GS-AI-DATA-02`, `GS-AI-LOG-01`)  
+**Standard reference:** [Government Standard v0.2.0](../../standard/v0.2.0.md) (Controls `GS-AI-CODE-01`, `GS-AI-CODE-02`, `GS-AI-DATA-02`, `GS-AI-LOG-01`)  
 **Applies to:** Backend services, APIs, microservices, and database layers developed or modified using AI tools  
 
 This profile guides backend engineers in verifying that server-side logic, API endpoints, database interactions, and data-processing pipelines comply with government security, privacy, and architectural standards.

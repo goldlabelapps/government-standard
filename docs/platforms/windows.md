@@ -4,7 +4,7 @@
 **Reviewed:** 23 November 2026  
 **Applies to:** AI-assisted software engineering on Windows workstations
 
-This profile applies the controls in the [Government Standard](../../standard/v0.1.0.md) to a Windows environment. It is guidance, not a configuration applied to this computer, a product-specific recipe, or a claim that Windows alone confines an AI agent.
+This profile applies the controls in the [Government Standard](../../standard/v0.2.0.md) to a Windows environment. It is guidance, not a configuration applied to this computer, a product-specific recipe, or a claim that Windows alone confines an AI agent.
 
 ## Starting position
 
